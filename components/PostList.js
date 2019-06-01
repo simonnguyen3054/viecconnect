@@ -203,7 +203,7 @@ class PostList extends React.Component {
                 <a className={classes.cardActionAreaLink}>
                   <CardActionArea>
                     <CardContent>
-                      <Typography component="p">{post.post_content}</Typography>
+                      <Typography color="textPrimary" component="p">{post.post_content}</Typography>
                     </CardContent>
 
                     <CardActions className={classes.tags}>
