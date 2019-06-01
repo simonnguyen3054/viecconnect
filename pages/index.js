@@ -1,5 +1,5 @@
 import fetch from "isomorphic-unfetch";
-import Prices from "../components/Prices.js";
+import PostList from "../components/PostList.js";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -192,6 +192,8 @@ class Index extends React.Component {
         </Grid>
 
         <Divider />
+
+        <PostList />
       </div>
     );
   }
