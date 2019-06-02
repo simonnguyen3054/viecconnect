@@ -101,6 +101,8 @@ class Index extends React.Component {
 
     const data = await res.json();
 
+    console.log(`Show data fetched. ${data}`);
+
     return {
       bpi: data.bpi
     };

@@ -199,7 +199,7 @@ class PostList extends React.Component {
                 subheader={this.handleDateFormat(post.post_date)}
               />
 
-              <Link href={"/posts/" + post.post_id}>
+              <Link as={`/p/${post.post_id}`} href={`/post?id=${post.post_id}`}>
                 <a className={classes.cardActionAreaLink}>
                   <CardActionArea>
                     <CardContent>
