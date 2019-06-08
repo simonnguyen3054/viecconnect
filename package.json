@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server/index.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
@@ -17,8 +17,10 @@
     "express": "^4.17.1",
     "isomorphic-unfetch": "^3.0.0",
     "mongodb": "^3.2.6",
+    "mongoose": "^5.3.16",
     "next": "^8.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "validator": "^10.9.0"
   }
 }
