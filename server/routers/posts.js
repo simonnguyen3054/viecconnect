@@ -2,26 +2,26 @@ const express = require("express");
 const router = express.Router();
 
 require("../../src/db/mongoose");
-const Job = require("../../src/models/job");
+const Post = require("../../src/models/post");
 
-router.get("/posts", (req, res) => {
-  res.json({
-    name: "Nail",
-    avatar: "image"
-  });
+router.post("/post", async (req, res) => {
+  const post = new Post(req.body);
+
+  try {
+    await post.save();
+    res.status(201).send(post);
+  } catch (e) {
+    res.status(400).send(e);
+  }
 });
 
-router.post("/posts", (req, res) => {
-  const job = new Job(req.body);
-
-  job
-    .save()
-    .then(() => {
-      res.send(job);
-    })
-    .catch(e => {
-      res.status(400).send(e);
-    });
+router.get("/posts", async (req, res) => {
+  try {
+    const posts = await Post.find({});
+    res.send(posts);
+  } catch (e) {
+    res.status(500).send();
+  }
 });
 
 module.exports = router;
